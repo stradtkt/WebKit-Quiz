@@ -3,6 +3,35 @@
 {% block content %} 
 
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center">Quiz App Test Your Knowledge</h1>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        {% for c in category %}
+            <p>
+                <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    {{c.name}}
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <ul class="nav">
+                        {% for q in c.quiz %}
+                        <li class="nav-item">
+                            <a href="{{q.id}}" class="nav-link">{{q.name}}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 
 
 {% endblock %}
