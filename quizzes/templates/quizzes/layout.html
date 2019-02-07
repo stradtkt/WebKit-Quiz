@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Quiz App WebKit{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'quizzes/theme/assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'quizzes/theme/assets/css/now-ui-kit.min.css' %}">
+    <link rel="stylesheet" href="{% static 'quizzes/assets/css/app.css' %}">
+</head>
+<body>
+    
+    {% block content %} {% endblock %}
+
+    <script src="{% static 'quizzes/theme/assets/js/core/jquery.min.js' %}"></script>
+    <script src="{% static 'quizzes/theme/assets/js/core/popper.min.js' %}"></script>
+    <script src="{% static 'quizzes/theme/assets/js/core/bootstrap.min.js' %}"></script>
+    <script src="{% static 'quizzes/theme/assets/js/now-ui-kit.js' %}"></script>
+    <script src="{% static 'quizzes/assets/js/app.js' %}"></script>
+</body>
+</html>
