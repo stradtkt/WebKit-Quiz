@@ -3,9 +3,11 @@ from .models import *
 # Create your views here.
 
 def index(request):
-    quiz = Quiz.objects.all()
+    category = QuizCategory.objects.all()
+    quiz = Quiz.objects.filter(category=category)
     context = {
-        "quiz": quiz
+        "quiz": quiz,
+        "category": category
     }
     return render(request, 'quizzes/index.html', context)
 
